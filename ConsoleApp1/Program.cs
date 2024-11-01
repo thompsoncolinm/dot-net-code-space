@@ -1,12 +1,22 @@
-﻿// See https://aka.ms/new-console-template for more information
-// Console.WriteLine("Hello, World!");
-// Console.WriteLine("The current time is " + DateTime.Now);
+﻿using Humanizer;
 
-// Console.WriteLine("Congratulations!");
-// Console.Write("You wrote your first lines of code.");
+Console.WriteLine("Quantities:");
+HumanizeQuantities();
 
-// This is the first line.
-// This is the second line.
+Console.WriteLine("\nDate/Time Manipulation:");
+HumanizeDates();
 
-Console.WriteLine("This is the first line.");
-Console.WriteLine("This is the second line.");
+static void HumanizeQuantities()
+{
+    Console.WriteLine("case".ToQuantity(0));
+    Console.WriteLine("case".ToQuantity(1));
+    Console.WriteLine("case".ToQuantity(5));
+}
+
+static void HumanizeDates()
+{
+    Console.WriteLine(DateTime.UtcNow.AddHours(-24).Humanize());
+    Console.WriteLine(DateTime.UtcNow.AddHours(-2).Humanize());
+    Console.WriteLine(TimeSpan.FromDays(1).Humanize());
+    Console.WriteLine(TimeSpan.FromDays(16).Humanize());
+}
