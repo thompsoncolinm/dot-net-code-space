@@ -29,3 +29,4 @@ C:\Users\Colin\code\dot-net-code-space\WebApplication1\obj\Debug\net8.0\refint\W
 C:\Users\Colin\code\dot-net-code-space\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 C:\Users\Colin\code\dot-net-code-space\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 C:\Users\Colin\code\dot-net-code-space\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+C:\Users\Colin\code\dot-net-code-space\WebApplication1\bin\Debug\net8.0\libman.json
