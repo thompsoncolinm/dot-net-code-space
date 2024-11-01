@@ -1,0 +1,57 @@
+:root {
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: helvetica;
+  }
+
+ul {
+    font-family: helvetica;
+}
+
+li {
+    list-style: circle;
+  }
+  
+  .list {
+    list-style: square;
+  }
+  
+  #msg {
+    font-family: monospace;
+  }
+
+  .light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+  }
+  .dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+  }
+
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    background: var(--bg);
+    color: var(--fontColor);
+}
+
+.calculator input[type="text"] {
+    grid-column: span 4;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: right;
+}
+
+.calculator button {
+    width: 40px;
+    font-size: 1.2em;
+}
