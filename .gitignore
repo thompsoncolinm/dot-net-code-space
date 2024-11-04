@@ -1,2 +1,5 @@
 
 /WebApplication1/wwwroot/lib
+/WebApplication1/publish
+/WebApplication1/obj
+*.zip
