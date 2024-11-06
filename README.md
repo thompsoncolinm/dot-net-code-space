@@ -2,6 +2,12 @@
 
 ## Environment setup
 
+### Console Project
+
+Terminal: `dotnet new console -o ./CsharpProjects/TestProject`
+
+File structure is whatever you want to call itself
+
 ```bash
 cd <Web Application Folder>
 dotnet run

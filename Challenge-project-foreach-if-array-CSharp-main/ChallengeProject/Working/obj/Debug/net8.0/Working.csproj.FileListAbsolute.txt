@@ -1,0 +1,15 @@
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\bin\Debug\net8.0\Working.exe
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\bin\Debug\net8.0\Working.deps.json
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\bin\Debug\net8.0\Working.runtimeconfig.json
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\bin\Debug\net8.0\Working.dll
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\bin\Debug\net8.0\Working.pdb
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\obj\Debug\net8.0\Working.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\obj\Debug\net8.0\Working.AssemblyInfoInputs.cache
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\obj\Debug\net8.0\Working.AssemblyInfo.cs
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\obj\Debug\net8.0\Working.csproj.CoreCompileInputs.cache
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\obj\Debug\net8.0\Working.sourcelink.json
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\obj\Debug\net8.0\Working.dll
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\obj\Debug\net8.0\refint\Working.dll
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\obj\Debug\net8.0\Working.pdb
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\obj\Debug\net8.0\Working.genruntimeconfig.cache
+C:\Users\Colin\code\dot-net-code-space\Challenge-project-foreach-if-array-CSharp-main\ChallengeProject\Working\obj\Debug\net8.0\ref\Working.dll

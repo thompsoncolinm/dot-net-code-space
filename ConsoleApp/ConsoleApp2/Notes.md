@@ -263,3 +263,243 @@ Console.WriteLine($"Nicolas:\t {nicolasScore}\t{CalculateLetterGrade(nicolasScor
 Console.WriteLine($"Zahirah:\t {zahirahScore}\t{CalculateLetterGrade(zahirahScore)}");
 Console.WriteLine($"Jeong:\t\t {jeongScore}\t{CalculateLetterGrade(jeongScore)}");
 ```
+
+```csharp
+string studentName = "Sophia Johnson";
+string[] courseNames = { "English 101", "Algebra 101", "Biology 101", "Computer Science I", "Psychology 101" };
+int[] courseCreditHours = { 3, 3, 4, 4, 3 };
+int[] courseCreditGrade = { 4, 3, 3, 3, 4 };
+
+
+// Write a funciton that assigns a grade to a student based the credits they've recieved
+
+string AssignGrade(int credit)
+{
+    if (credit == 4)
+    {
+        return "A";
+    }
+    else if (credit == 3)
+    {
+        return "B";
+    }
+    else if (credit == 2)
+    {
+        return "C";
+    }
+    else if (credit == 1)
+    {
+        return "D";
+    }
+    else
+    {
+        return "F";
+    }
+} 
+
+// Display the course names along with the numeric grade
+
+for (int i = 0; i < courseNames.Length; i++)
+{
+    Console.WriteLine($"{courseNames[i]}: {courseCreditGrade[i]} {courseCreditHours[i]}");
+}
+
+int totalCreditHours = courseCreditHours.Sum();
+
+int totalGradePoints = 0;
+
+for (int i = 0; i < courseCreditHours.Length; i++)
+{
+    totalGradePoints += courseCreditHours[i] * courseCreditGrade[i];
+}
+
+double gpa = (double)totalGradePoints / totalCreditHours;
+
+Console.WriteLine($"{totalGradePoints} {totalCreditHours}");
+Console.WriteLine($"GPA: {gpa}");
+
+// Format the decimal output to two decimal places
+
+// Console.WriteLine($"GPA: {gpa.ToString("F2")}");    // GPA: 3.35 // Preferred method
+
+// Figure out how to do that calculation with just integers
+
+int leadingDigit = (int )gpa;
+int firstTrailingDigit = (int)((gpa * 10) % 10);
+int secondTrailingDigit = (int)((gpa * 100) % 10);
+
+Console.WriteLine($"GPA: {leadingDigit}.{firstTrailingDigit}{secondTrailingDigit}");    // GPA: 3.35
+
+Console.WriteLine($"Student: {studentName}");
+
+Console.WriteLine("Course\t\t\t\tGrade\tCredit Hours");
+
+for (int i = 0; i < courseNames.Length; i++)
+{
+    string tabs = new string('\t', (32 - courseNames[i].Length + 7) / 8);
+    Console.WriteLine($"{courseNames[i]}{tabs}{AssignGrade(courseCreditGrade[i])}\t{courseCreditHours[i]}");
+}
+
+```
+
+## Methods
+
+```csharp
+Random dice = new Random(); // Create a new Random object   // state instance
+int roll = dice.Next(1, 7);
+Console.WriteLine(roll);
+```
+
+```csharp
+Random dice = new Random();
+int roll1 = dice.Next();
+int roll2 = dice.Next(101);
+int roll3 = dice.Next(50, 101);
+
+Console.WriteLine($"First roll: {roll1}");
+Console.WriteLine($"Second roll: {roll2}");
+Console.WriteLine($"Third roll: {roll3}");
+```
+
+```csharp
+int firstValue = 500;
+int secondValue = 600;
+int largerValue;
+
+largerValue = Math.Max(firstValue, secondValue);
+
+Console.WriteLine(largerValue);
+```
+
+## Conditionals
+
+```csharp
+Random dice = new Random();
+
+int roll1 = dice.Next(1, 7);
+int roll2 = dice.Next(1, 7);
+int roll3 = dice.Next(1, 7);
+
+// roll1 = 6; // test rolls
+// roll2 = 6; // test rolls
+// roll3 = 6; // test rolls
+
+int total = roll1 + roll2 + roll3;
+
+Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+
+if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
+{
+    if ((roll1 == roll2) && (roll2 == roll3))
+    {
+        Console.WriteLine("You rolled triples!  +6 bonus to total!");
+        total += 6;
+    }
+    else
+    {
+        Console.WriteLine("You rolled doubles!  +2 bonus to total!");
+        total += 2;
+    }
+}
+
+if (total >= 15)
+{
+    Console.WriteLine("You win!");
+}
+else 
+{
+    Console.WriteLine("Sorry, you lose.");
+}
+
+if (total >= 16)
+{
+    Console.WriteLine("You win a new car!");
+}
+else if (total >= 10)
+{
+    Console.WriteLine("You win a new laptop!");
+}
+else if (total >= 7)
+{
+    Console.WriteLine("You win a trip for two!");
+}
+else
+{
+    Console.WriteLine("You win a kitten!");
+}
+```
+
+```csharp
+
+Random random = new Random();
+int daysUntilExpiration = random.Next(12);
+int discountPercentage = 0;
+
+// Code only displays one message
+// If the user's subscripton will expire in 10 days or less, display the massage "Your subscription will expire soon. Renew now!"
+
+// if the user's subscription will expire in five days or less, display the message "Your subscription will expire in _ days. Renew now and save 10%!"
+
+// If the user's subscription has expired, display the message "Your subscription has expired"
+
+
+// If the user's subscription doesn't expire in 10 days or less, display nothing
+
+// if (daysUntilExpiration <= 10)
+// {
+//     Console.WriteLine("Your subscription will expire soon. Renew now!");
+// }
+// else if (daysUntilExpiration <= 5)
+// {
+//     discoutPercentage = 10;
+//     Console.WriteLine($"Your subscription will expire in {daysUntilExpiration} days. Renew now and save {discoutPercentage}%!");
+// }
+// else if (daysUntilExpiration == 0)
+// {
+//     Console.WriteLine("Your subscription has expired");
+// }
+// else
+// {
+//     Console.WriteLine("");
+// }
+
+if (daysUntilExpiration == 0)
+{
+    Console.WriteLine("Your subscription has expired.");
+}
+else if (daysUntilExpiration == 1)
+{
+    Console.WriteLine("Your subscription expires within a day!");
+    discountPercentage = 20;
+}
+else if (daysUntilExpiration <= 5)
+{
+    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
+    discountPercentage = 10;
+}
+else if (daysUntilExpiration <= 10)
+{
+    Console.WriteLine("Your subscription will expire soon. Renew now!");
+}
+
+if (discountPercentage > 0)
+{
+    Console.WriteLine($"Renew now and save {discountPercentage}%.");
+}
+```
+
+```csharp
+string[] fraudulentOrderIDs = new string[3];
+
+fraudulentOrderIDs[0] = "A123";
+fraudulentOrderIDs[1] = "B456";
+fraudulentOrderIDs[2] = "C789";
+// fraudulentOrderIDs[3] = "D000";
+
+string[] numericPositons = {"first", "second", "third", "fourth", "fifth"};
+
+for (int i = 0; i < fraudulentOrderIDs.Length; i++)
+{
+    Console.WriteLine($"{numericPositons[i]}: {fraudulentOrderIDs[i]}");
+}
+```
