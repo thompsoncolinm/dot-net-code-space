@@ -1,29 +1,44 @@
-﻿// Combine strings using character escape sequences
+﻿string firstName = "Bob";
+// string message = "Hello " + firstName;
+// Console.WriteLine(message);
+string greeting = "Hello";
+Console.WriteLine(greeting + " " + firstName); // Concatenation
+Console.WriteLine($"{greeting} {firstName}"); // String interpolation
 
-Console.WriteLine("Hello\nWorld!");
-Console.WriteLine("Hello\tWorld!");
-Console.WriteLine("Hello \"World!\"");
+// string message = $"Hello {firstName}";
+// Console.WriteLine(message);
 
-// Format output using character escape sequences
+// Using string interpolation with multiple variables and literal strings
 
-Console.WriteLine("Generating invoices for customer \"Contso Corp\" ...\n");
-Console.WriteLine("Invoice: 1021\t\tComplete!");
-Console.WriteLine("Invoice: 1022\t\tComplete!");
-Console.WriteLine("\nOutput Directory:\t");
+int version = 11;
+string updateText = "Update to Windows";
+string message = $"{updateText} {version} is available";
 
-// Verbatim String Literal
+Console.WriteLine(message);
 
-Console.WriteLine(@"    c:\source\repos
-    (this is where your code goes)");
+// Combine verbatim literals and string interpolation
 
-// Unicode escape characters
+// string projectName = "First-Project";
+// Console.WriteLine($@"C:\Output\{projectName}\Data");
 
-// Kon'nichiwa World! (Hello World! in Japanese)
-Console.WriteLine("\u3053\u3093\u306B\u3061\u306F World!");
+// Challenge: Format and display instructions
 
-// To generate Japanese invoices:
-// Nihon no seiku-sho - seisei suru ni wa:
-Console.WriteLine("\u65E5\u672C\u306E\u8D08\u4F0A\u66F8 - \u751F\u6210\u3059\u308B\u306B\u306F:");
-// User command to run an application
-Console.WriteLine(@"c:\invoices\app.exe -j");
+string projectName = "ACME";
+
+string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";   // Russian  // "View Russian output"
+
+// You may not change the above strings. You can only change the code below this comment.
+
+// Only by creating two instructons that print to the console.
+
+// View English output:
+//   c:\Exercise\ACME\data.txt
+
+Console.WriteLine($"View English output:\n\t  c:\\Exercise\\{projectName}\\data.txt");
+
+// Посмотреть русский вывод:
+//   c:\Exercise\ACME\ru-RU\data.txt
+Console.WriteLine($"{russianMessage}:\n\t  c:\\Exercise\\{projectName}\\ru-RU\\data.txt");
+
+
 
