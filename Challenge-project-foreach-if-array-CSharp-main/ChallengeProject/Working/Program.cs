@@ -176,7 +176,7 @@ foreach (string name in studentNames)
     // Logan           91.2            93.12   A       96 (1.92 pts)
 
 
-    Console.WriteLine($"{currentStudent}\t\t{currentStudentExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{currentStudentCreditScore} (0 pts)");
+    Console.WriteLine($"{currentStudent}\t\t{currentStudentExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{currentStudentCreditScore} ({currentStudentGrade - currentStudentExamScore} pts)");
 
 }
 
