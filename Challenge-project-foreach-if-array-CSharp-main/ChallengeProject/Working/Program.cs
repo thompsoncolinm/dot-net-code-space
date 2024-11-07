@@ -44,7 +44,7 @@ The outer foreach loop is used to:
 - sum assignment scores (inner foreach loop)
 - calculate numeric and letter grade
 - write the score report information
-*/
+*/P
 
 foreach (string name in studentNames)
 {

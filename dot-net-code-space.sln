@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApp", "ConsoleApp", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp\ConsoleApp2\ConsoleApp2.csproj", "{9B3E23C2-1586-4351-A29C-BE2DB6ADA9B3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{426F3BF4-5F00-43B1-ABC8-91DEFE50829D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApp\WebApplication1\WebApplication1.csproj", "{8DD5EEF0-D232-47D0-AB66-75EFBB3C669A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{9B3E23C2-1586-4351-A29C-BE2DB6ADA9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B3E23C2-1586-4351-A29C-BE2DB6ADA9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B3E23C2-1586-4351-A29C-BE2DB6ADA9B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD5EEF0-D232-47D0-AB66-75EFBB3C669A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD5EEF0-D232-47D0-AB66-75EFBB3C669A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD5EEF0-D232-47D0-AB66-75EFBB3C669A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD5EEF0-D232-47D0-AB66-75EFBB3C669A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9B3E23C2-1586-4351-A29C-BE2DB6ADA9B3} = {9448E694-D9AD-4EEE-8324-1159D8B5F124}
+		{8DD5EEF0-D232-47D0-AB66-75EFBB3C669A} = {426F3BF4-5F00-43B1-ABC8-91DEFE50829D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E7396A5-A86A-4534-ADBF-34FD78C4A8B0}
