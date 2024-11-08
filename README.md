@@ -208,6 +208,121 @@ az webapp deploy --resource-group TestGroup --name yourappname --src-path ".\pub
 
 The URL with this name example would then be: `https://yourappname.azurewebsites.net`
 
+## Creating a Microsoft SQL server database
+
+## Creating a Microsoft SQL server database
+
+### Plan:
+
+1. **Install Entity Framework Core SQL Server Package**
+2. **Configure the Connection String**
+3. **Update Program.cs to Use SQL Server**
+4. **Create and Apply Migrations**
+
+### Step 1: Install Entity Framework Core SQL Server Package
+
+Run the following command in your terminal to add the SQL Server provider:
+
+```bash
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+```
+
+### Step 2: Configure the Connection String
+
+Add a connection string to your `appsettings.json` file:
+
+```json
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=MyAppDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+}
+```
+
+### Step 3: Update Program.cs to Use SQL Server
+
+Modify your `Program.cs` to configure the `MyAppContext` with SQL Server:
+
+```csharp
+public class MyAppContext : DbContext
+{
+        public MyAppContext(DbContextOptions<MyAppContext> options) : base(options) { }
+
+        public DbSet<Item> Items { get; set; }
+}
+
+public class Item
+{
+        public int Id { get; set; }
+        public string Name { get; set; }
+}
+
+public class Program
+{
+        public static void Main(string[] args)
+        {
+                var host = CreateHostBuilder(args).Build();
+                host.Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+                Host.CreateDefaultBuilder(args)
+                        .ConfigureWebHostDefaults(webBuilder =>
+                        {
+                                webBuilder.UseStartup<Startup>();
+                        });
+}
+
+public class Startup
+{
+        public void ConfigureServices(IServiceCollection services)
+        {
+                services.AddDbContext<MyAppContext>(options =>
+                        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+                if (env.IsDevelopment())
+                {
+                        app.UseDeveloperExceptionPage();
+                }
+                else
+                {
+                        app.UseExceptionHandler("/Home/Error");
+                        app.UseHsts();
+                }
+                app.UseHttpsRedirection();
+                app.UseStaticFiles();
+                app.UseRouting();
+                app.UseAuthorization();
+                app.UseEndpoints(endpoints =>
+                {
+                        endpoints.MapControllerRoute(
+                                name: "default",
+                                pattern: "{controller=Home}/{action=Index}/{id?}");
+                });
+        }
+}
+```
+
+### Step 4: Create and Apply Migrations
+
+First, ensure you have the EF Core CLI tools installed:
+
+```bash
+dotnet tool install --global dotnet-ef
+```
+
+Then, create a migration and update the database:
+
+```bash
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+
+This will create the database `MyAppDb` with the `Items` table based on your `MyAppContext` configuration.
+
 ### Additional Resources
 
 - [Deploy an ASP.NET Core app to Azure](https://docs.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore)

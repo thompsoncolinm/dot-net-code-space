@@ -96,3 +96,4 @@ C:\Users\Colin\code\dot-net-code-space\WebApp\WebApplication1\obj\Debug\net9.0\r
 C:\Users\Colin\code\dot-net-code-space\WebApp\WebApplication1\obj\Debug\net9.0\WebApplication1.pdb
 C:\Users\Colin\code\dot-net-code-space\WebApp\WebApplication1\obj\Debug\net9.0\WebApplication1.genruntimeconfig.cache
 C:\Users\Colin\code\dot-net-code-space\WebApp\WebApplication1\obj\Debug\net9.0\ref\WebApplication1.dll
+C:\Users\Colin\code\dot-net-code-space\WebApp\WebApplication1\obj\Debug\net9.0\WebApplication1.csproj.AssemblyReference.cache
