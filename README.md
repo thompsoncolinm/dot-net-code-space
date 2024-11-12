@@ -210,8 +210,6 @@ The URL with this name example would then be: `https://yourappname.azurewebsites
 
 ## Creating a Microsoft SQL server database
 
-## Creating a Microsoft SQL server database
-
 ### Plan:
 
 1. **Install Entity Framework Core SQL Server Package**
@@ -224,7 +222,9 @@ The URL with this name example would then be: `https://yourappname.azurewebsites
 Run the following command in your terminal to add the SQL Server provider:
 
 ```bash
+dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Tools
 ```
 
 ### Step 2: Configure the Connection String

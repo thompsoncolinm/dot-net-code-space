@@ -150,5 +150,12 @@ namespace WebApplication1.Controllers
         {
             return _context.Items.Any(e => e.Id == id);
         }
+
+        // GET: Items/Overview
+        public async Task<IActionResult> Overview()
+        {
+            var items = await _context.Items.ToListAsync();
+            return View(items);
+        }
     }
 }
